@@ -1,0 +1,85 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+	"files": {
+		"maxSize": 2097152,
+		"includes": [
+			"**/*.ts",
+			"**/*.tsx",
+			"**/*.js",
+			"**/*.jsx",
+			"**/*.json",
+			"!**/dist",
+			"!**/.cache",
+			"!**/*.d.ts",
+			"!**/_generated",
+			"!**/.next",
+			"!**/.turbo",
+			"!**/.clerk",
+			"!**/node_modules"
+		]
+	},
+	"overrides": [
+		{
+			"includes": ["**/_generated/**"],
+			"linter": {
+				"enabled": false
+			}
+		}
+	],
+	"linter": {
+		"rules": {
+			"suspicious": {
+				"noArrayIndexKey": "off",
+				"noAssignInExpressions": "off",
+				"noExplicitAny": "error",
+				"noConsole": {
+					"level": "warn",
+					"options": {
+						"allow": ["info", "warn", "error", "debug", "log"]
+					}
+				},
+				"noDebugger": "error",
+				"noDoubleEquals": "error",
+				"noRedeclare": "error",
+				"noShadowRestrictedNames": "error",
+				"useAwait": "off",
+				"noAsyncPromiseExecutor": "error",
+				"noDocumentCookie": "off"
+			},
+			"correctness": {
+				"useExhaustiveDependencies": "warn",
+				"useHookAtTopLevel": "error",
+				"noUndeclaredVariables": "off",
+				"noUnusedImports": "error",
+				"noUnusedVariables": "error"
+			},
+			"performance": {
+				"useTopLevelRegex": "off",
+				"noNamespaceImport": "off"
+			},
+			"style": {
+				"noExportedImports": "off",
+				"noNestedTernary": "off",
+				"useCollapsedElseIf": "off",
+				"useDefaultSwitchClause": "off",
+				"useFilenamingConvention": "off"
+			},
+			"complexity": {
+				"noVoid": "off",
+				"noForEach": "off",
+				"noExcessiveCognitiveComplexity": "off",
+				"noBannedTypes": "off"
+			},
+			"a11y": {
+				"useKeyWithClickEvents": "off",
+				"noStaticElementInteractions": "off",
+				"useSemanticElements": "off",
+				"noLabelWithoutControl": "off",
+				"useFocusableInteractive": "off"
+			},
+			"nursery": {
+				"noShadow": "off"
+			}
+		}
+	}
+}
